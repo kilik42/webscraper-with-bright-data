@@ -1,3 +1,5 @@
+import Header from '../../components/Header'
+import Sidebar from '../../components/Sidebar'
 import './globals.css'
 
 export const metadata = {
@@ -12,7 +14,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className='flex bg-[#F7FBFF] h-screen'>
+        {/* sidebar */}
+        <Sidebar/>
+        {/* main */}
+        <main className='p-10 max-w-7xl w-full mx-auto overflow-y-auto'>
+          {/* header */}
+          <Header/>
+        {children}
+        </main>
+        </body>
     </html>
   )
 }
